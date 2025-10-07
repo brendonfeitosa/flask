@@ -1,0 +1,34 @@
+Crie a aplicação e instale o Flask nela
+
+Criar o arquivo equirements.txt: 
+    * pip freeze > requirements.txt
+    * Este comando vai gerar um arquivo requirements.txt com as versões exatas das bibliotecas que você tem instaladas.
+
+Criar o arquivo vercel.json com o seguinte conteúdo
+    {
+        "version": 2,
+        "builds": [
+            {
+            "src": "app.py",
+            "use": "@vercel/python"
+            }
+        ],
+        "routes": [
+            {
+            "src": "/(.*)",
+            "dest": "/app.py"
+            }
+        ]
+    }
+
+Fazer commit do projeto no github
+
+Criar conta na vercel: 
+    *https://vercel.com/
+
+Criar um novo projeto na Vercel e dizer que quer puxar o projeto de um repositório do github
+    * Importar o repositório que esta o projeto no github
+
+Para testar suas APIs acesse da seguinte forma:
+    * URL gerada pela Vercel: https://flask-git-main-brendon-feitosas-projects.vercel.app
+    * Adicionar / e os demais parametros para sua aplicação
