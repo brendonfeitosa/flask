@@ -8,7 +8,7 @@ def buscar(user_id, nome):
     return f"Usuário: id: {user_id} - Nome: {nome}"
 
 #parametros na rota como QueryString
-@app.route('/cadastrar', methods=['POST'])
+@app.route('/cadastrar', methods=['GET'])
 def cadastrar():
     user_id = request.args.get('id')
     nome = request.args.get('nome')
