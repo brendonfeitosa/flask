@@ -1,6 +1,10 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__) #objeto que vai rodar na função main do python
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 #parametros na rota
 @app.route('/buscar/<int:user_id>/<string:nome>', methods=['GET', 'POST']) #decorator para passar uma rota, ele deve sempre estar em cima da sua função
