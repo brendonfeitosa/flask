@@ -3,58 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Flask na Vercel</title>
+    <title>Flask na Vercel</title>
     <style>
+        /* Corpo principal — centraliza tudo */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
-            text-align: center;
             margin: 0;
             padding: 0;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            font-size: 24px;
-        }
-        main {
-            margin-top: 50px;
-        }
-        .content {
-            margin: 20px;
-            padding: 20px;
-            background-color: white;
+
+        /* Container geral (inclui header, conteúdo e footer) */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 700px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
+
+        header {
+            background-color: #043e4d;
+            color: white;
+            padding: 15px;
+            font-size: 22px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .content {
+            padding: 30px 40px;
+            background-color: white;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
         footer {
-            margin-top: 50px;
-            padding: 10px;
             background-color: #333;
             color: white;
+            padding: 10px;
             font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
+
+        a {
+            color: blue;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        Bem-vindo à minha aplicação Flask na Vercel!
-    </header>
+    <div class="container">
+        <header>
+            Bem-vindo à minha aplicação Flask na Vercel!
+        </header>
 
-    <main>
         <div class="content">
             <h2>Testando o deploy na Vercel!</h2>
             <p>Essa é a página inicial da minha aplicação Flask!</p>
             <p><a href="/buscar/1/Joao">Clique aqui</a> para testar a rota de busca com parâmetros na URL.</p>
             <p><a href="/cadastrar?id=1&nome=Joao">Clique aqui</a> para testar a rota de cadastro com parâmetros na Query String.</p>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 - Meu Flask na Vercel</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 - Meu Flask na Vercel</p>
+        </footer>
+    </div>
 
 </body>
 </html>
